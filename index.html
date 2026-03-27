@@ -21,9 +21,16 @@
 
 <main class="container">
     <section class="search-section">
-        <form id="build-form">
-            <div class="form-group">
-                <label for="class-select">Classe :</label>
+        <div class="search-container">
+            <div class="class-image-container">
+                <!-- L'image de la classe sera injectée ici -->
+                <img id="class-preview-image" src="" alt="Sélectionnez une classe" style="display: none;">
+                <div id="class-preview-placeholder">Aperçu</div>
+            </div>
+
+            <form id="build-form">
+                <div class="form-group">
+                    <label for="class-select">Classe :</label>
                 <select id="class-select" required>
                     <option value="" disabled selected>Sélectionnez une classe</option>
                     <option value="Cra">Crâ</option>
@@ -57,11 +64,12 @@
                     <option value="Eau">Eau</option>
                     <option value="Air">Air</option>
                     <option value="Multi">Multi-éléments</option>
-                </select>
-            </div>
+                    </select>
+                </div>
 
-            <button type="submit" id="search-btn">Chercher un build</button>
-        </form>
+                <button type="submit" id="search-btn">Chercher un build</button>
+            </form>
+        </div>
     </section>
 
     <section id="results-section">
